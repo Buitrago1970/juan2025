@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "@/styles/Navbar.module.css";
+import Section from "./Navbar/Section";
+import Contact from "./Navbar/Contact";
+import NavItem from "./Navbar/NavItem";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("home");
@@ -14,8 +14,11 @@ export default function Navbar() {
   ];
 
   const socialMedia = ["Mail", "Linkedin", "Github", "Read.cv"];
-  const webInterfaces = ["Web Design", "UI/UX Design", "Full"];
-
+  const webInterfaces = [
+    { name: "Web Design", link: "/web-design" },
+    { name: "UI/UX Design", link: "/ui-ux-design" },
+    { name: "Full", link: "/full" },
+  ];
   const handleScroll = (id: string) => {
     setActiveSection(id);
     const element = document.getElementById(id);
@@ -35,75 +38,18 @@ export default function Navbar() {
       <div className="border border-gray-items border-b-0 min-w-[230px] rounded-[6px] pb-10">
         <div className="border-b border-gray-items mt-8 pb-8 space-y-3">
           {navegation.map((nav, index) => (
-            <div
+            <NavItem
               key={index}
-              className="cursor-pointer"
-              onClick={() => handleScroll(nav.link)}
-            >
-              <p
-                className={`flex items-center text-sm cursor-pointer text-white ${
-                  activeSection === nav.link ? styles.active : ""
-                }`}
-              >
-                <p className="ml-4 font-light hover:text-gray-400">
-                  {nav.name}
-                </p>
-                {activeSection === nav.link ? (
-                  <div>
-                    <Image
-                      src="/Polygon.svg"
-                      alt="arrow"
-                      width={15}
-                      height={15}
-                      className="mr-4"
-                    />
-                  </div>
-                ) : null}
-              </p>
-            </div>
+              name={nav.name}
+              link={nav.link}
+              activeSection={activeSection}
+              handleScroll={handleScroll}
+            />
           ))}
         </div>
-        <div className="border-b border-gray-items mt-6 pb-5">
-          <div>
-            <h3 className="text-white ml-4 mb-4 tracking-wide text-[12px]">
-              DESTACADO
-            </h3>
-            <div className="text-white">
-              <Link href="/hackathon">
-                <p className="ml-4 cursor-pointer text-xs">Hackathon</p>
-              </Link>
-            </div>
-          </div>
-          <br />
-          <br />
-          <br />
-          <div>
-            <h3 className="text-white mt-7 ml-4 mb-4 tracking-wide text-[12px]">
-              WEB INTERFACES
-            </h3>
-            <div className="space-y-2">
-              {webInterfaces.map((web, index) => (
-                <div className="text-white text-xs" key={index}>
-                  <p className="ml-4 cursor-pointer">{web}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="mt-5 pb-5">
-            <h3 className="text-white mt-6 ml-4 mb-6 tracking-wide text-[12px]">
-              CONTACT
-            </h3>
-            <div className="text-white flex flex-col space-y-3">
-              {socialMedia.map((social, index) => (
-                <a href="" key={index} className="ml-4 cursor-pointer text-xs ">
-                  <p className="hover:text-gray-400 inline">{social}</p>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
+        <Section title="DESTACADO" items={[{ name: "Hackathon", link: "/hackathon" }]} isLink />
+        <Section title="WEB INTERFACES" items={webInterfaces} />
+        <Contact socialMedia={socialMedia} />
       </div>
     </nav>
   );
