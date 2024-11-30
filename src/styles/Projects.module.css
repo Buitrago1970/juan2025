@@ -1,0 +1,172 @@
+.container-row-project {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 5em;
+    justify-items: center;
+    justify-content: center;
+    align-items: start;
+}
+.container-secondary-row-project {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: start;
+}
+.colorop {
+    background: rgb(62, 62, 219);
+}
+.full {
+    width: 100%;
+    min-width: 420px;
+}
+.view {
+    font-family: "Abril Fatface", serif;
+    letter-spacing: 2px;
+}
+@media screen and (max-width: 1169px) {
+    .container-row-project {
+        gap: 2rem;
+    }
+    .container-secondary-row-project {
+        gap: 2rem;
+    }
+    .small {
+        min-width: 420px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .container-row-project {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 6em;
+        margin-bottom: 6em;
+    }
+    .container-secondary-row-project {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 6em;
+    }
+    .full {
+        width: auto;
+        max-width: 420px;
+    }
+    .small {
+        width: 420px;
+        min-width: 420px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .full {
+        width: auto;
+        max-width: auto;
+        min-width: auto;
+    }
+    .small {
+        width: auto;
+        min-width: auto;
+    }
+}
+.shadow-video {
+    box-shadow: 0px 54px 60px 0px rgba(0, 0, 0, 0.25);
+}
+.betplay {
+    background-image: linear-gradient(
+        115deg,
+        hsl(223deg 81% 20%) 0%,
+        hsl(221deg 78% 21%) 21%,
+        hsl(220deg 75% 22%) 38%,
+        hsl(219deg 74% 23%) 51%,
+        hsl(217deg 72% 24%) 61%,
+        hsl(216deg 71% 25%) 69%,
+        hsl(215deg 70% 26%) 75%,
+        hsl(213deg 70% 27%) 81%,
+        hsl(212deg 69% 27%) 86%,
+        hsl(210deg 69% 28%) 92%,
+        hsl(209deg 69% 29%) 100%
+    );
+}
+.san {
+    background-image: linear-gradient(
+        180deg,
+        hsl(4deg 67% 42%) 0%,
+        hsl(4deg 67% 42%) 5%,
+        hsl(4deg 67% 41%) 11%,
+        hsl(4deg 67% 40%) 19%,
+        hsl(4deg 67% 39%) 26%,
+        hsl(4deg 67% 38%) 33%,
+        hsl(4deg 67% 37%) 40%,
+        hsl(4deg 67% 36%) 47%,
+        hsl(4deg 67% 35%) 54%,
+        hsl(4deg 67% 34%) 60%,
+        hsl(4deg 67% 33%) 66%,
+        hsl(4deg 67% 32%) 72%,
+        hsl(4deg 67% 31%) 77%,
+        hsl(4deg 66% 30%) 82%,
+        hsl(4deg 66% 29%) 86%,
+        hsl(4deg 66% 27%) 90%,
+        hsl(4deg 66% 26%) 93%,
+        hsl(4deg 66% 25%) 96%,
+        hsl(4deg 66% 23%) 98%,
+        hsl(4deg 66% 22%) 99%,
+        hsl(4deg 66% 20%) 100%,
+        hsl(4deg 66% 18%) 100%
+    );
+}
+.kitsch {
+    background-image: linear-gradient(
+        180deg,
+        hsl(220deg 72% 94%) 0%,
+        hsl(221deg 67% 94%) 5%,
+        hsl(222deg 62% 94%) 11%,
+        hsl(224deg 57% 94%) 19%,
+        hsl(225deg 53% 94%) 26%,
+        hsl(227deg 48% 94%) 33%,
+        hsl(229deg 43% 94%) 40%,
+        hsl(232deg 39% 94%) 47%,
+        hsl(235deg 34% 94%) 54%,
+        hsl(239deg 30% 94%) 60%,
+        hsl(244deg 27% 94%) 66%,
+        hsl(250deg 25% 93%) 72%,
+        hsl(257deg 22% 93%) 77%,
+        hsl(264deg 20% 93%) 82%,
+        hsl(273deg 18% 93%) 86%,
+        hsl(283deg 16% 92%) 90%,
+        hsl(295deg 15% 92%) 93%,
+        hsl(308deg 15% 92%) 96%,
+        hsl(319deg 17% 92%) 98%,
+        hsl(327deg 19% 92%) 99%,
+        hsl(334deg 21% 92%) 100%,
+        hsl(340deg 23% 92%) 100%
+    );
+}
+.rainbow {
+    background-image: linear-gradient(
+        180deg,
+        hsl(278deg 88% 27%) 7%,
+        hsl(290deg 68% 29%) 19%,
+        hsl(304deg 59% 31%) 26%,
+        hsl(316deg 57% 35%) 31%,
+        hsl(325deg 56% 39%) 36%,
+        hsl(333deg 55% 43%) 40%,
+        hsl(340deg 54% 46%) 44%,
+        hsl(345deg 54% 49%) 48%,
+        hsl(350deg 58% 52%) 51%,
+        hsl(355deg 65% 55%) 54%,
+        hsl(360deg 72% 58%) 57%,
+        hsl(4deg 80% 58%) 61%,
+        hsl(6deg 82% 58%) 64%,
+        hsl(8deg 84% 58%) 67%,
+        hsl(9deg 86% 57%) 70%,
+        hsl(11deg 88% 57%) 73%,
+        hsl(12deg 90% 57%) 76%,
+        hsl(14deg 92% 56%) 79%,
+        hsl(16deg 93% 56%) 83%,
+        hsl(17deg 95% 55%) 86%,
+        hsl(19deg 97% 54%) 90%,
+        hsl(20deg 98% 53%) 95%,
+        hsl(24deg 100% 50%) 100%
+    );
+}
