@@ -1,0 +1,6 @@
+.animatedText .char {
+    display: inline-block;
+    transform-origin: center center;
+    perspective: 1000px;
+    backface-visibility: hidden;
+  }
