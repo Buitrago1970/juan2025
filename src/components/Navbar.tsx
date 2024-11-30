@@ -1,20 +1,28 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import "./Navbar.css";
+import styles from "@/styles/Navbar.module.css";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("home");
 
   const navegation = [
-    { name: "Homepage", link: "home" },
-    { name: "Work", link: "work" },
-    { name: "About", link: "about" },
+    { name: "Homepage", link: "header" },
+    { name: "Work", link: "projects" },
+    { name: "About", link: "about-me" },
     { name: "Contact", link: "contact" },
   ];
 
   const socialMedia = ["Mail", "Linkedin", "Github", "Read.cv"];
   const webInterfaces = ["Web Design", "UI/UX Design", "Full"];
+
+  const handleScroll = (id: string) => {
+    setActiveSection(id);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <nav className=" max-w-[240px] h-[100vh] pt-[5px] ben">
@@ -30,12 +38,11 @@ export default function Navbar() {
             <div
               key={index}
               className="cursor-pointer"
-              onClick={() => setActiveSection(nav.link)}
+              onClick={() => handleScroll(nav.link)}
             >
-              <a
-                href={`#${nav.link}`}
+              <p
                 className={`flex items-center text-sm cursor-pointer text-white ${
-                  activeSection === nav.link ? "active" : ""
+                  activeSection === nav.link ? styles.active : ""
                 }`}
               >
                 <p className="ml-4 font-light hover:text-gray-400">
@@ -52,7 +59,7 @@ export default function Navbar() {
                     />
                   </div>
                 ) : null}
-              </a>
+              </p>
             </div>
           ))}
         </div>

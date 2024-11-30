@@ -1,6 +1,10 @@
 import styles from "@/styles/Contact.module.css";
 
-export default function Contact() {
+interface ContactProps {
+  id?: string;
+}
+
+const Contact: React.FC<ContactProps> = ({ id }) => {
   const links = [
     {
       name: "Mail",
@@ -19,15 +23,13 @@ export default function Contact() {
     },
   ];
 
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div className="text-white mr-2 sm:mr-7 mb-5">
-
-        <h1 className={`${styles.titleContact}`}>LET’S CREATE BEAUTIFUL THINGS</h1>
+    <section id={id} className="text-white mr-2 sm:mr-7 mb-5">
+      <h1 className={`${styles.titleContact}`}>LET’S CREATE BEAUTIFUL THINGS</h1>
       <div className="flex lg:justify-end mt-5 lg:mt-20">
         <p className="w-[450px] pr-5 text-sm">
           Thank you for visiting my portfolio. I am currently working for
@@ -65,6 +67,8 @@ export default function Contact() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default Contact;

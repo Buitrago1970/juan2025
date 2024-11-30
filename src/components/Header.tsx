@@ -1,8 +1,12 @@
 import styles from '@/styles/Header.module.css';
 
-export default function Header() {
+interface HeaderProps {
+  id?: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ id }) => {
   return (
-    <header>
+    <header id={id}>
       <div className={`${styles.titleMain} pb-14 lg:pb-36`}>
         <p>I develop precise, engaging, and accessible digital experiences.</p>
       </div>
@@ -14,4 +18,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

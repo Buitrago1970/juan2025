@@ -1,0 +1,19 @@
+.active {
+    background-color: white;
+    height: 37px;
+    border-radius: 7px;
+    width: 200px;
+    padding-left: 1.25rem;
+    margin-left: 0.5rem;
+    justify-content: space-between;
+    color: black;
+    transition: all 0.3s ease;
+  }
+  
+  .active p {
+    margin-left: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+    transition: all 0.3s ease;
+  }

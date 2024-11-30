@@ -4,22 +4,33 @@ import Projects from "@/components/Projects"
 import AboutMe from "@/components/AboutMe"
 import Contact from "@/components/Contact"
 
+
 export default function Home() {
+ 
+
   return (
     <MainLayout title="Home" description="Welcome to my portfolio">
       <div className="ml-5 lg:ml-10">
-        <Header />
-       <Projects />
+        <section id="header">
+          <Header />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
         <div className="text-white">
           <hr className="my-1 lg:my-3" />
           <p className="text-lg font-medium lg:text-base">About Me</p>
         </div>
-        <AboutMe />
+        <section id="about-me">
+          <AboutMe />
+        </section>
         <div className="text-white">
           <hr className="my-1 lg:my-3" />
           <p className="text-lg font-medium lg:text-base">CONTACT</p>
         </div>
-        <Contact />
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
     </MainLayout>
   );
