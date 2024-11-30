@@ -1,36 +1,12 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {  useRef } from "react";
 
 import styles from '@/styles/AboutMe.module.css';
 import Cards from "./Cards";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMe() {
   const textRef = useRef(null);
 
-  useEffect(() => {
-    gsap.fromTo(
-      textRef.current,
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0, 
-        duration: 1,
-        ease: "power2.out", 
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 80%",
-          end: "top 60%", 
-          scrub: true,
-        },
-      }
-    );
-  }, []);
 
   const sentence =
     "I have dedicated my career to developing web applications that are not only functional but also charming and intuitive.";
