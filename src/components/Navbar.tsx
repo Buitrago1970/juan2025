@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Section from "./Navbar/Section";
 import Contact from "./Navbar/Contact";
 import NavItem from "./Navbar/NavItem";
@@ -6,18 +6,18 @@ import NavItem from "./Navbar/NavItem";
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("home");
 
-  const navegation = [
+  const navegation = useMemo(() => [
     { name: "Homepage", link: "header" },
     { name: "Work", link: "projects" },
     { name: "About", link: "about-me" },
     { name: "Contact", link: "contact" },
-  ];
+  ], []);
 
   const socialMedia = ["Mail", "Linkedin", "Github", "Read.cv"];
   const webInterfaces = [
-    { name: "Web Design", link: "/web-design" },
+    // { name: "Web Design", link: "/web-design" },
     { name: "UI/UX Design", link: "/ui-ux-design" },
-    { name: "Full", link: "/full" },
+    // { name: "Full", link: "/full" },
   ];
 
   const handleScroll = (id: string) => {
