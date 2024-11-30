@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Section from "./Navbar/Section";
 import Contact from "./Navbar/Contact";
 import NavItem from "./Navbar/NavItem";
@@ -19,6 +19,7 @@ export default function Navbar() {
     { name: "UI/UX Design", link: "/ui-ux-design" },
     { name: "Full", link: "/full" },
   ];
+
   const handleScroll = (id: string) => {
     setActiveSection(id);
     const element = document.getElementById(id);
@@ -26,6 +27,28 @@ export default function Navbar() {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  useEffect(() => {
+    const handleScrollEvent = () => {
+      const sections = navegation.map(nav => document.getElementById(nav.link));
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      for (const section of sections) {
+        if (section) {
+          const { offsetTop, offsetHeight } = section;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", handleScrollEvent);
+    };
+  }, [navegation]);
 
   return (
     <nav className=" max-w-[240px] h-[100vh] pt-[5px] ben">
