@@ -20,8 +20,7 @@ export default function Cards() {
   ];
 
   return (
-    <div
-    >
+    <div>
       <h2 className="text-base lg:text-lg pl-2 lg:pl-0 bg-green-page w-[70%] lg:w-[250px] py-[2px] lg:text-center rounded-s mb-10 font-medium text-black lg:font-semibold lg:mb-20">
         What I can do for you...
       </h2>
@@ -35,9 +34,7 @@ export default function Cards() {
               <div className="square"></div>
               <div className="line"></div>
             </div>
-            <div
-              className="lg:w-[343px] mb-7 lg:h-[168px] lg:px-8 pt-2 rounded-[25px] lg:border flex flex-col lg:items-center "
-            >
+            <div className="lg:w-[343px] mb-7 lg:h-[168px] lg:px-8 pt-2 rounded-[25px] lg:border flex flex-col lg:items-center">
               <div className="flex lg:items-cente mb-3 lg:mb-6 mr-5 lg:mr-0">
                 <h3 className="service-title text-[25px] lg:text-[30px] font-semibold text-white tracking-wide">
                   {service.title}

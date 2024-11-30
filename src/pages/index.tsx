@@ -2,6 +2,7 @@ import MainLayout from "@/layouts/MainLayout";
 import Header from "@/components/Header"
 import Projects from "@/components/Projects"
 import AboutMe from "@/components/AboutMe"
+import Contact from "@/components/Contact"
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
           <hr className="my-1 lg:my-3" />
           <p className="text-lg font-medium lg:text-base">CONTACT</p>
         </div>
-        {/* <Contact />  */}
+        <Contact />
       </div>
     </MainLayout>
   );
