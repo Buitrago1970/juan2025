@@ -1,9 +1,11 @@
 import HeroSection from "@/components/hackathon/HeroSection";
 import ProjectDetails from "@/components/hackathon/DetailsSection";
 import ProjectGallery from "@/components/hackathon/ProjectGallery";
+import PageTransition from "@/components/PageTransition";
 
 export default function Hackathon() {
   return (
+    <PageTransition>
       <div className="bg-black-gray text-white">
         <HeroSection />
         
@@ -19,5 +21,6 @@ export default function Hackathon() {
           </div>
         </div>
       </div>
+    </PageTransition>
   );
 }
