@@ -3,7 +3,7 @@ import Header from "@/components/Header"
 import Projects from "@/components/Projects"
 import AboutMe from "@/components/AboutMe"
 import Contact from "@/components/Contact"
-import NoiseCanvas from "@/components/NoiseCanvas/NoiseCanvas";
+// import NoiseCanvas from "@/components/NoiseCanvas/NoiseCanvas";
 
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <MainLayout title="Home" description="Welcome to my portfolio">
-      <NoiseCanvas />
+      {/* <NoiseCanvas /> */}
       <div className="ml-5 lg:ml-10">
         <section id="header">
           <Header />

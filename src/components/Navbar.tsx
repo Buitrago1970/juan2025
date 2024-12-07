@@ -51,7 +51,7 @@ export default function Navbar() {
   }, [navegation]);
 
   return (
-    <nav className=" max-w-[240px] h-[100vh] pt-[5px] ben">
+    <nav className=" max-w-[240px] h-[100vh] pt-[5px]">
       <div className="flex items-center justify-center h-[100px] min-w-[240 px] border border-gray-items rounded-[6px] mb-[5px]">
         <div className="">
           <h3 className="text-white text-lg font-semibold">Juan Buitrago</h3>

@@ -30,7 +30,9 @@ export default function MainLayout({
           <NavbarResponsive />
         </div>
         <div className="m-0 main lg:ml-[240px] flex-1">
-          <main>{children}</main>
+          <div className="content-animate">
+            <main>{children}</main>
+          </div>
         </div>
       </div>
     </>
