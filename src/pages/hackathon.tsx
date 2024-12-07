@@ -8,7 +8,6 @@ export default function Hackathon() {
     <PageTransition>
       <div className="bg-black-gray text-white">
         <HeroSection />
-        
         <div className="flex flex-col lg:flex-row px-8 py-12 gap-6">
           <div className="lg:w-[28%] space-y-6">
             <h1 className="text-2xl font-bold uppercase">Solana eco eco</h1>

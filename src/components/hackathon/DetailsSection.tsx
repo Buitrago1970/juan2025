@@ -34,23 +34,20 @@ interface ProjectDetail {
     ];
   
     return (
-      <div className="lg:w-[72%] space-y-4">
-        <div>
-          <div className="grid grid-cols-2 space-x-4">
+      <div className="">
+          <div className="grid grid-cols-2 space-x-4 mb-7 gap-6">
             <p>
-              For 2 years, I prototyped new ways to engage with computer
-              interfaces, mostly working with voice and AI...
+            For 2 years, I prototyped new ways to engage with computer interfaces, mostly working with voice and AI. Brain was one of the first companies to explore the idea of multimodal, generative interfaces. My time working 
             </p>
             <p>
-              with the team has shaped many of the principles I design with
-              now...
+            with the team has shaped many of the principles I design with now. Most of my work stayed in R&D but pieces of it have shipped and are now in the app store↗ .
             </p>
           </div>
-          <div className="grid grid-cols-2 space-x-4">
+          <div className="grid grid-cols-2 space-x-4 gap-6">
             <DetailsSection details={leftDetails} />
             <DetailsSection details={rightDetails} />
           </div>
-        </div>
+     
       </div>
     );
   }
