@@ -1,10 +1,11 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import Section from "./Navbar/Section";
 import Contact from "./Navbar/Contact";
 import NavItem from "./Navbar/NavItem";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("home");
+  const isScrolling = useRef(false);
 
   const navegation = useMemo(() => [
     { name: "Homepage", link: "header" },
@@ -22,14 +23,22 @@ export default function Navbar() {
 
   const handleScroll = (id: string) => {
     setActiveSection(id);
+    isScrolling.current = true;
+
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Reset the flag after animation completes (typical duration is 1000ms)
+      setTimeout(() => {
+        isScrolling.current = false;
+      }, 1000);
     }
   };
 
   useEffect(() => {
     const handleScrollEvent = () => {
+      if (isScrolling.current) return;
+
       const sections = navegation.map(nav => document.getElementById(nav.link));
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
