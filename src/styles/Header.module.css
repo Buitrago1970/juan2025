@@ -3,7 +3,11 @@
     font-size: 90px;
     color: #fefefe;
   }
-  
+  .solanaTitle {
+    font-family: "Abril Fatface", serif;
+    /* font-size: 90px; */
+    color: #fefefe;
+  }
   @media screen and (max-width: 768px) {
     .titleMain {
       font-size: 70px;

@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function BackButton() {
   return (
-    <Link href="/" className="relative z-50">
-      <div className="absolute top-8 left-8 w-12 h-12 border border-white rounded-full flex items-center justify-center cursor-pointer">
+    <Link href="/" className="fixed z-50">
+      <div className="fixed top-8 left-8 w-12 h-12 border border-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
