@@ -33,8 +33,8 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
       <div className="flex lg:justify-end mt-5 lg:mt-20">
         <p className="w-[450px] pr-5 text-sm">
           Thank you for visiting my portfolio. I am currently working for
-          Betplay, but I am always interested in new challenges and
-          opportunities.
+          Betplay, but I am always interested in new and powerful
+          challenges and opportunities.
         </p>
       </div>
       <div className="justify-center mt-20 hidden lg:flex">
