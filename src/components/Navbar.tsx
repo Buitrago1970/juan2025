@@ -22,9 +22,9 @@ export default function Navbar() {
   };
 
   const socialMediaData: SocialMedia[] = [
-    { name: "Mail", value: "your.actual@email.com", type: "copy" },
-    { name: "LinkedIn", value: "https://www.linkedin.com/in/tu-perfil", type: "link" },
-    { name: "GitHub", value: "https://github.com/tu-usuario", type: "link" },
+    { name: "Mail", value: "juanbuitrago2002@outlook.com", type: "copy" },
+    { name: "LinkedIn", value: "https://www.linkedin.com/in/sebastianbbuitrago/", type: "link" },
+    { name: "GitHub", value: "https://github.com/Buitrago1970", type: "link" },
     { name: "Resume", value: "/ruta/a/tu/cv.pdf", type: "pdf" }
   ];
 
