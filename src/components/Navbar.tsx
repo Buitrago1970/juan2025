@@ -3,6 +3,7 @@ import Section from "./Navbar/Section";
 import Contact from "./Navbar/Contact";
 import NavItem from "./Navbar/NavItem";
 
+
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("home");
   const isScrolling = useRef(false);
@@ -14,7 +15,19 @@ export default function Navbar() {
     { name: "Contact", link: "contact" },
   ], []);
 
-  const socialMedia = ["Mail", "Linkedin", "Github", "Read.cv"];
+  type SocialMedia = {
+    name: string;
+    value: string;
+    type: "copy" | "link" | "pdf";
+  };
+
+  const socialMediaData: SocialMedia[] = [
+    { name: "Mail", value: "your.actual@email.com", type: "copy" },
+    { name: "LinkedIn", value: "https://www.linkedin.com/in/tu-perfil", type: "link" },
+    { name: "GitHub", value: "https://github.com/tu-usuario", type: "link" },
+    { name: "Resume", value: "/ruta/a/tu/cv.pdf", type: "pdf" }
+  ];
+
   const webInterfaces = [
     // { name: "Web Design", link: "/web-design" },
     { name: "UI/UX Design", link: "/ui-ux-design" },
@@ -80,8 +93,8 @@ export default function Navbar() {
         </div>
         <Section title="DESTACADO" items={[{ name: "Hackathon", link: "/hackathon" }]} isLink />
         <Section title="WEB INTERFACES" items={webInterfaces} />
-        <Contact socialMedia={socialMedia} />
-      </div>
+        <Contact socialMedia={socialMediaData} />
+              </div>
     </nav>
   );
 }
