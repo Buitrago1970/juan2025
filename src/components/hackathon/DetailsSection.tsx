@@ -68,13 +68,13 @@ export default function ProjectDetails() {
 
   return (
     <div className="">
-        <div className="grid grid-cols-2 space-x-4 mb-7 gap-6">
+        <div className="grid grid-cols-2 space-x-4 mb-10 gap-6">
           <p>
           During the hackathon organized by Solana, we developed an innovative solution that addresses one of the greatest current challenges: reducing the carbon footprint.             </p>
           <p>
           Our project secured second place among dozens of proposals, standing out for its practical and scalable approach.            </p>
         </div>
-        <div className="grid grid-cols-2 space-x-4 gap-6">
+        <div className="grid grid-cols-2 space-x-4 gap-6 mb-7">
           <DetailsSection details={leftDetails} />
           <DetailsSection details={rightDetails} />
         </div>

@@ -4,7 +4,7 @@ import Projects from "@/components/Projects"
 import AboutMe from "@/components/AboutMe"
 import Contact from "@/components/Contact"
 import PageTransition from "@/components/PageTransition";
-// import NoiseCanvas from "@/components/NoiseCanvas/NoiseCanvas";
+import NoiseCanvas from "@/components/NoiseCanvas/NoiseCanvas";
 
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <MainLayout title="Home" description="Welcome to my portfolio">
-      {/* <NoiseCanvas /> */}
+      <NoiseCanvas /> 
       <PageTransition>
         <div className="ml-5 lg:ml-10">
           <section id="header">

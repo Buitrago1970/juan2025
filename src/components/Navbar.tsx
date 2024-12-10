@@ -28,7 +28,6 @@ export default function Navbar() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
-      // Reset the flag after animation completes (typical duration is 1000ms)
       setTimeout(() => {
         isScrolling.current = false;
       }, 1000);
@@ -60,8 +59,8 @@ export default function Navbar() {
   }, [navegation]);
 
   return (
-    <nav className=" max-w-[240px] h-[100vh] pt-[5px]">
-      <div className="flex items-center justify-center h-[100px] min-w-[240 px] border border-gray-items rounded-[6px] mb-[5px]">
+    <nav className="h-screen pt-[5px] w-[240px]">
+      <div className="flex items-center justify-center h-[100px] border border-gray-items rounded-[6px] mb-[5px]">
         <div className="">
           <h3 className="text-white text-lg font-semibold">Juan Buitrago</h3>
           <p className="text-gray-300 text-xs -mt-1">Web Developer</p>
