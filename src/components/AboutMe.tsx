@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from 'gsap';
-import styles from '@/styles/AboutMe.module.css';
+import styles from "../styles/AboutMe.module.css";
 import Cards from "./Cards";
 
 interface AboutMeProps {

@@ -36,7 +36,7 @@ export default function Contact({ socialMedia }: { socialMedia: SocialMedia[] })
           >
             <p className={`hover:text-gray-400 inline ${copied === social.name ? 'text-green-500' : ''}`}>
               {social.name}
-              {copied === social.name && <span className="ml-2">(Copiado!)</span>}
+              {copied === social.name && <span className="ml-2">(Copied!)</span>}
             </p>
           </button>
         ))}
