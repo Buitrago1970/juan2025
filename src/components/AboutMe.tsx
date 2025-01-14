@@ -12,7 +12,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ id }) => {
   const highlightRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
   useEffect(() => {
-    if (textRef.current) {
+    if (typeof window !== 'undefined' && textRef.current) {
       // Animación principal del texto
       gsap.fromTo(textRef.current,
         { y: 50, opacity: 0 },
