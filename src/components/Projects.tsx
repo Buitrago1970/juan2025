@@ -14,8 +14,8 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
         "Web Developer: Leading Colombia’s top sports betting and casino platform.",
       color: "betplay",
       width: "full",
-      video: "./Screen Recording 2025-01-22 at 4.51.29 PM.mp4",
-      link: "https://www.google.com",
+      video: "./betplay1.mp4",
+      link: "https://betplay.com.co/",
     },
     {
       title: "San Diego",
@@ -43,10 +43,10 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       description:
       "Frontend Developer: Development of the new application interface, focusing on usability and an engaging user experience.",
       color: "rainbow",
-      video: "./Screen Recording 2025-01-22 at 4.51.29 PM.mp4",
+      video: "./apostala1.mp4",
       width: "full",
 
-      link: "https://www.google.com",
+      link: "https://nuevo.aposta.la/bets",
     }
   ];
 
