@@ -2,23 +2,23 @@ import Image from "next/image";
 
 const projects = [
   {
-    image: "/solana_header.png",
+    image: "/Screenshot 2025-01-22 at 8.37.39 PM.png",
     title: "1. Payment for Emission Reduction",
     description: "Companies pay us to offset their carbon footprint.",
   },
   {
-    image: "/solana_header.png",
+    image: "/Screenshot 2025-01-22 at 8.39.26 PM.png",
     title: "2. Tree Planting",
     description: "We invest these resources in planting trees that absorb carbon dioxide.",
   },
   {
-    image: "/solana_header.png",
+    image: "/im_nota-hackseries.jpg",
     title: "3. Blockchain Certification",
     description:
       "We use Solana to immutably record the amount of CO₂ offset, ensuring traceability and reliability.",
   },
   {
-    image: "/solana_header.png",
+    image: "/Group 404.png",
     title: "My Role in the Team",
     description:
       "I contributed to the development of the application’s front-end, ensuring an intuitive and professional interface. Additionally, I worked on integrating the carbon offset metrics with the blockchain, allowing companies to visualize their emission reductions in real-time.",
