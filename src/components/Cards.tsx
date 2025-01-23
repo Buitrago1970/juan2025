@@ -20,8 +20,8 @@ export default function Cards() {
 
   return (
     <div>
-      <h2 className="text-base lg:text-lg pl-2 lg:pl-0 bg-green-page w-[70%] lg:w-[250px] py-[2px] lg:text-center rounded-s mb-10 font-medium text-black lg:font-semibold lg:mb-20">
-        What I can do for you...
+      <h2 className="text-base bg-orange-500 lg:text-lg pl-2 lg:pl-0 w-[70%] lg:w-[250px] py-[2px] lg:text-center rounded-s mb-10 font-medium text-black lg:font-semibold lg:mb-20">
+        What I can do best
       </h2>
       <div className="flex flex-col items-center justify-center lg:flex-row gap-x-10">
         {services.map((service, index) => (

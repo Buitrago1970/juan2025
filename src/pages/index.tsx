@@ -14,7 +14,7 @@ export default function Home() {
     <MainLayout title="Home" description="Welcome to my portfolio">
       <NoiseCanvas /> 
       <PageTransition>
-        <div className="ml-5 lg:ml-10">
+        <div className="ml-5 lg:ml-10 [@media(max-width:1138px)]:!ml-5">
           <section id="header">
             <Header />
           </section>

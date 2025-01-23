@@ -41,6 +41,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
       <h1 className={`${styles.titleContact}`}>
         LET’S CREATE BEAUTIFUL THINGS
       </h1>
+
       <div className="flex lg:justify-end mt-5 lg:mt-20">
         <p className="w-[450px] pr-5 text-sm">
           Thank you for visiting my portfolio. I am currently working for
@@ -48,6 +49,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
           opportunities.
         </p>
       </div>
+
       <div className="justify-center mt-20 hidden lg:flex">
         <button
           className={`${styles.goTopBtn} border border-white rounded-full text-[10px] w-[80px]`}
@@ -56,13 +58,14 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
           GO TOP
         </button>
       </div>
+
       <div className="space-y-12 lg:flex justify-between items-end mt-[80px]">
         {links.map((link) => (
           <div key={link.name}>
             <h3 className="text-xl font-semibold">{link.name}</h3>
             {link.url ? (
               <a href={link.url} target="_blank" rel="noreferrer">
-                <p className="text-xs text-gray-200 mt-2 flex items-center">
+                <div className="text-xs text-gray-200 mt-2 flex items-center">
                   {link.text}
                   {link.name === "Mail" && (
                     <div
@@ -75,6 +78,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                         height="17"
                         viewBox="0 0 100 100"
                       >
+                        {/* Reemplazamos stroke-width por strokeWidth */}
                         <rect
                           x="20"
                           y="20"
@@ -84,7 +88,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                           ry="5"
                           fill="#cccccc"
                           stroke="#000000"
-                          stroke-width="2"
+                          strokeWidth={2}
                         />
                         <rect
                           x="30"
@@ -95,7 +99,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                           ry="5"
                           fill="#ffffff"
                           stroke="#000000"
-                          stroke-width="2"
+                          strokeWidth={2}
                         />
                       </svg>
                       {/* Tooltip */}
@@ -104,10 +108,10 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                       </span>
                     </div>
                   )}
-                </p>
+                </div>
               </a>
             ) : (
-              <p className="text-xs text-gray-200 mt-2 flex items-center">
+              <div className="text-xs text-gray-200 mt-2 flex items-center">
                 {link.text}
                 {link.name === "Mail" && (
                   <div
@@ -129,7 +133,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                         ry="5"
                         fill="#cccccc"
                         stroke="#000000"
-                        stroke-width="2"
+                        strokeWidth={2}
                       />
                       <rect
                         x="30"
@@ -140,7 +144,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                         ry="5"
                         fill="#ffffff"
                         stroke="#000000"
-                        stroke-width="2"
+                        strokeWidth={2}
                       />
                     </svg>
                     {/* Tooltip */}
@@ -149,7 +153,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     </span>
                   </div>
                 )}
-              </p>
+              </div>
             )}
           </div>
         ))}
