@@ -72,14 +72,14 @@ export default function Navbar() {
   }, [navegation]);
 
   return (
-    <nav className="h-screen pt-[5px] w-[240px]">
+    <nav className="h-full pt-[5px] w-[240px] pb-5">
       <div className="flex items-center justify-center h-[100px] border border-gray-items rounded-[6px] mb-[5px]">
         <div className="">
           <h3 className="text-white text-lg font-semibold">Juan Buitrago</h3>
           <p className="text-gray-300 text-xs -mt-1">Web Developer</p>
         </div>
       </div>
-      <div className="border border-gray-items border-b-0 min-w-[230px] rounded-[6px] pb-10">
+      <div className="border border-gray-items border-b-0 min-w-[230px] rounded-[6px] h-[calc(100%-110px)] overflow-y-auto">
         <div className="border-b border-gray-items mt-8 pb-8 space-y-3">
           {navegation.map((nav, index) => (
             <NavItem

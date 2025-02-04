@@ -22,8 +22,8 @@ export default function MainLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="lg:flex bg-black-gray min-h-screen">
-        <div className="hidden lg:block fixed top-0 left-0 h-full w-[240px] z-50">
+      <div className="lg:flex bg-black-gray min-h-screen w-full">
+        <div className="hidden lg:block fixed top-0 left-0 h-screen w-[240px] z-50">
           <Navbar />
         </div>
         <div className="lg:hidden z-50">
