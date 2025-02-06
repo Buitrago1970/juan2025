@@ -18,16 +18,6 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       link: "https://betplay.com.co/",
     },
     {
-      title: "San Diego",
-      description: "Innovative UI-Focused Full-Stack Designer and Developer.",
-      color: "san",
-      width: "420px",
-      video: "./Screen Recording 2025-01-21 at 8.14.59 PM.mp4",
-      link: "https://www.google.com",
-    },
-  ];
-  const projectsSecondRow = [
-    {
       title: "Kitsh",
       description:
       "Digital Architect from Conceptual Design to Full-Stack Coding.",
@@ -36,6 +26,16 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       video: "./kitsch.mp4",
       link: "https://13kitsch.vercel.app/",
     },
+  ];
+  const projectsSecondRow = [
+    {
+      title: "San Diego",
+      description: "Innovative UI-Focused Full-Stack Designer and Developer.",
+      color: "san",
+      width: "420px",
+      video: "./Grabación de pantalla 2025-02-06 a la(s) 3.32.48 p.m..mp4",
+      link: "https://sandiegocol.netlify.app/",
+    },
     {
       title: "Apostala",
       description:
@@ -43,7 +43,6 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       color: "rainbow",
       video: "./apostala1.mp4",
       width: "full",
-
       link: "https://nuevo.aposta.la/bets",
     }
   ];
