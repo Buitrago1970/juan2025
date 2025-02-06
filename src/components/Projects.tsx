@@ -33,10 +33,8 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       "Digital Architect from Conceptual Design to Full-Stack Coding.",
       color: "kitsch",
       width: "420px",
-
-      video: "./Screen Recording 2025-01-21 at 8.14.59 PM.mp4",
-      
-      link: "https://www.google.com",
+      video: "./kitsch.mp4",
+      link: "https://13kitsch.vercel.app/",
     },
     {
       title: "Apostala",
