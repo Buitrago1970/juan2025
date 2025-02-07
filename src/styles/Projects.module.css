@@ -153,3 +153,20 @@
     background: linear-gradient(173deg, rgba(237,47,55,1) 27%, rgba(51,53,58,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ed2f37",endColorstr="#33353a",GradientType=1);
 }
+
+.projectItem {
+    transition: filter 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: filter;
+}
+
+.projectItem.dimmed {
+    filter: grayscale(85%) brightness(0.8);
+}
+
+.projectItem:hover {
+    filter: grayscale(0%) brightness(1);
+}
+
+.projectItem video {
+    transition: filter 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}

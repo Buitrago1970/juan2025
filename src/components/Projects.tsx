@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "@/styles/Projects.module.css";
 import ProjectRow from "@/components/ProjectRow";
 
@@ -7,6 +7,8 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ id }) => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   const projectsFirstRow = [
     {
       title: "Betplay",
@@ -53,10 +55,16 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
         <ProjectRow
           projects={projectsFirstRow}
           containerClass={styles["container-row-project"]}
+          hoveredIndex={hoveredIndex}
+          setHoveredIndex={setHoveredIndex}
+          indexOffset={0}
         />
         <ProjectRow
           projects={projectsSecondRow}
           containerClass={styles["container-secondary-row-project"]}
+          hoveredIndex={hoveredIndex}
+          setHoveredIndex={setHoveredIndex}
+          indexOffset={projectsFirstRow.length}
         />
       </div>
     </section>

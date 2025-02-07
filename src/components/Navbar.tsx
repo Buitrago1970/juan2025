@@ -79,6 +79,7 @@ export default function Navbar() {
           <p className="text-gray-300 text-xs -mt-1">Web Developer</p>
         </div>
       </div>
+      
       <div className="border border-gray-items border-b-0 min-w-[230px] rounded-[6px] h-[calc(100%-110px)] overflow-y-auto">
         <div className="border-b border-gray-items mt-8 pb-8 space-y-3">
           {navegation.map((nav, index) => (

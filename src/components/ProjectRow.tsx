@@ -4,6 +4,9 @@ import styles from "@/styles/Projects.module.css";
 export default function ProjectRow({
     projects,
     containerClass,
+    hoveredIndex,
+    setHoveredIndex,
+    indexOffset
   }: {
     projects: {
       title: string;
@@ -14,6 +17,9 @@ export default function ProjectRow({
       link?: string;
     }[];
     containerClass: string;
+    hoveredIndex: number | null;
+    setHoveredIndex: (index: number | null) => void;
+    indexOffset: number;
   }) {
   return (
         <div className={containerClass}>
@@ -22,7 +28,11 @@ export default function ProjectRow({
               key={index}
               className={`${
                 project.width === "full" ? styles.full : styles.small
-              } w-full brightness-[0.9] hover:brightness-100 transition-all duration-300 `}
+              } ${styles.projectItem} ${
+                hoveredIndex !== null && hoveredIndex !== (index + indexOffset) ? styles.dimmed : ''
+              } w-full transition-all duration-300`}
+              onMouseEnter={() => setHoveredIndex(index + indexOffset)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
               <a
                 href={project.link}
