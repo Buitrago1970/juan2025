@@ -52,6 +52,7 @@ export default function ProjectRow({
                   muted
                   autoPlay
                   loop
+                  preload="metadata"
                 ></video>
               </a>
               <div className="block lg:flex lg:space-x-2 space-y-4 lg:space-y-0 lg:text-sm text-gray-400 items-start">

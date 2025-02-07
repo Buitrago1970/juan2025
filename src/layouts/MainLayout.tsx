@@ -20,7 +20,7 @@ export default function MainLayout({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/sb.svg" />
+        <link rel="icon" href="/sb.ico" />
       </Head>
       <div className="lg:flex bg-black-gray min-h-screen w-full">
         <div className="hidden lg:block fixed top-0 left-0 h-screen w-[240px] z-50">
