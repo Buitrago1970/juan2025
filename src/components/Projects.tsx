@@ -35,7 +35,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       description: "Innovative UI-Focused Full-Stack Designer and Developer.",
       color: "san",
       width: "420px",
-      video: "./Grabación de pantalla 2025-02-06 a la(s) 3.32.48 p.m..mp4",
+      video: "./Grabación de pantalla 2025-02-06 a la(s) 3.32.48 p.m.-2.mp4",
       link: "https://sandiegocol.netlify.app/",
     },
     {

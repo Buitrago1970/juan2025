@@ -43,11 +43,24 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
       </h1>
 
       <div className="flex lg:justify-end mt-5 lg:mt-20">
-        <p className="w-[450px] pr-5 text-sm">
-          Thank you for visiting my portfolio. I am currently working for
-          Betplay, but I am always interested in new and powerful challenges and
-          opportunities.
-        </p>
+        <div className="w-[450px] pr-5">
+          <p className="text-sm">
+            Thank you for visiting my portfolio. I am currently working for
+            Betplay, but I am always interested in new and powerful challenges and
+            opportunities.
+          </p>
+          <div 
+            className="relative group cursor-pointer"
+            onClick={handleCopy}
+          >
+            <p className="text-xs text-gray-400 mt-2 italic hover:text-gray-300 transition-colors">
+              Contact me at: juanbuitrago2002@outlook.com
+            </p>
+            <span className="absolute -right-16 bottom-full mb-1 bg-gray-800 text-white text-xs p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+              {copyText}
+            </span>
+          </div>
+        </div>
       </div>
 
       <div className="justify-center mt-20 hidden lg:flex">
