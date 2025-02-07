@@ -22,7 +22,7 @@ export default function ProjectRow({
               key={index}
               className={`${
                 project.width === "full" ? styles.full : styles.small
-              } w-full brightness-[0.9] hover:brightness-100 transition-all duration-300`}
+              } w-full brightness-[0.9] hover:brightness-100 transition-all duration-300 `}
             >
               <a
                 href={project.link}
