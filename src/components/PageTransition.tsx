@@ -13,28 +13,22 @@ export default function PageTransition({ children }: PageTransitionProps) {
   useEffect(() => {
     if (!elementRef.current) return;
     
-    const hasVisited = localStorage.getItem('hasVisited');
-    
-    // Animación inicial al cargar el sitio por primera vez
-    if (!hasVisited) {
-      gsap.fromTo(
-        elementRef.current,
-        {
-          opacity: 0,
-          scale: 0.8,
-          filter: 'blur(15px)'
-        },
-        {
-          opacity: 1,
-          scale: 1,
-          filter: 'blur(0px)',
-          duration: 1.5,
-          ease: 'power1.inOut'
-        }
-      );
-      
-      localStorage.setItem('hasVisited', 'true');
-    }
+    // Animación inicial que se ejecutará en cada visita
+    gsap.fromTo(
+      elementRef.current,
+      {
+        opacity: 0,
+        scale: 0.8,
+        filter: 'blur(15px)'
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        filter: 'blur(0px)',
+        duration: 1,
+        ease: 'power2.out'
+      }
+    );
 
     // Configurar las animaciones de transición entre páginas
     const handleRouteChangeStart = () => {

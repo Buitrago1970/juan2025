@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
 import styles from "@/styles/Projects.module.css";
 import ProjectRow from "@/components/ProjectRow";
 
@@ -8,6 +9,42 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ id }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Reset hover state when component mounts/unmounts
+  useEffect(() => {
+    setHoveredIndex(null);
+    return () => {
+      setHoveredIndex(null);
+    };
+  }, []);
+
+  useEffect(() => {
+    const projects = containerRef.current?.querySelectorAll(`.${styles.projectItem}`);
+    
+    if (projects) {
+      gsap.from(projects, {
+        y: 50,
+        opacity: 1, // Cambiado de 0 a 1 para evitar la opacidad inicial
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0,
+        delay: 0.5
+      });
+    }
+
+    // Asegurarse de que todos los proyectos sean visibles
+    const resetProjects = () => {
+      if (projects) {
+        projects.forEach((project) => {
+          (project as HTMLElement).style.opacity = '1';
+        });
+      }
+    };
+
+    resetProjects();
+    return () => resetProjects();
+  }, []);
 
   const projectsFirstRow = [
     {
@@ -51,7 +88,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
 
   return (
     <section id={id}>
-      <div className="mt-14 mx-5 pb-16 mb-20">
+      <div ref={containerRef} className="mt-14 mx-5 pb-16 mb-20">
         <ProjectRow
           projects={projectsFirstRow}
           containerClass={styles["container-row-project"]}

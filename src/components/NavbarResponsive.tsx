@@ -4,7 +4,6 @@ export default function NavbarResponsive() {
   const navegation = [
     { name: "Homepage", link: "header" },
     { name: "Work", link: "projects" },
-    { name: "About", link: "about-me" },
     { name: "Contact", link: "contact" },
   ];
 

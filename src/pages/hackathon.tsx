@@ -12,7 +12,7 @@ export default function Hackathon() {
         <div className="flex flex-col lg:flex-row px-8 py-12 gap-6">
           <div className="lg:w-[28%] space-y-2">
             <h1  className={`${styles.solanaTitle} text-3xl font-bold uppercase`}>Hackathon Solana 2024:</h1>
-            <p>Reducción de Huella de Carbono con Blockchain</p>
+            <p>Carbon Footprint Reduction with Blockchain</p>
           </div>
           
           <div className="lg:w-[72%]">

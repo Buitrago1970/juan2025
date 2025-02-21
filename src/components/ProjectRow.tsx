@@ -29,7 +29,7 @@ export default function ProjectRow({
               className={`${
                 project.width === "full" ? styles.full : styles.small
               } ${styles.projectItem} ${
-                hoveredIndex !== null && hoveredIndex !== (index + indexOffset) ? styles.dimmed : ''
+                hoveredIndex !== null && hoveredIndex !== (index + indexOffset) ? 'opacity-40' : 'opacity-100'
               } w-full transition-all duration-300`}
               onMouseEnter={() => setHoveredIndex(index + indexOffset)}
               onMouseLeave={() => setHoveredIndex(null)}

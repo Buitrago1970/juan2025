@@ -12,7 +12,6 @@ export default function Navbar() {
     () => [
       { name: "Homepage", link: "header" },
       { name: "Work", link: "projects" },
-      { name: "About", link: "about-me" },
       { name: "Contact", link: "contact" },
     ],
     []
