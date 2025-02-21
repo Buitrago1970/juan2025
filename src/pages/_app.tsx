@@ -9,11 +9,14 @@ export const abril = Abril_Fatface({
 
 export const montserrat = Montserrat({
   subsets: ['latin'],
-  // Incluimos algunos pesos comunes
   weight: ['400', '500', '600', '700']
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <main className={montserrat.className}>
+      <Component {...pageProps} />
+    </main>
+  );
 }
 // https://drive.google.com/file/d/1D4uRoxs9gIiujdHKGtk5HqngyrilfB91/view?usp=share_link
