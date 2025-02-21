@@ -53,7 +53,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
         "Web Developer: Leading Colombia’s top sports betting and casino platform.",
       color: "betplay",
       width: "full",
-      video: "./betplay1.mp4",
+      video: "https://d2aw5og880ztxv.cloudfront.net/betplay1.mp4",
       link: "https://betplay.com.co/",
     },
     {
@@ -62,7 +62,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       "Digital Architect from Conceptual Design to Full-Stack Coding.",
       color: "kitsch",
       width: "420px",
-      video: "./kitsch.mp4",
+      video: "https://d2aw5og880ztxv.cloudfront.net/kitsch.mp4",
       link: "https://13kitsch.vercel.app/",
     },
   ];
@@ -72,7 +72,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       description: "Innovative UI-Focused Full-Stack Designer and Developer.",
       color: "san",
       width: "420px",
-      video: "./Grabación de pantalla 2025-02-06 a la(s) 3.32.48 p.m.-2.mp4",
+      video: "https://d2aw5og880ztxv.cloudfront.net/sandiego.mp4",
       link: "https://sandiegocol.netlify.app/",
     },
     {
@@ -80,7 +80,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       description:
       "Frontend Developer: Development of the new application interface, focusing on usability and an engaging user experience.",
       color: "rainbow",
-      video: "./apostala1.mp4",
+      video: "https://d2aw5og880ztxv.cloudfront.net/apostala1.mp4", 
       width: "full",
       link: "https://nuevo.aposta.la/bets",
     }
